@@ -49,7 +49,7 @@ def install():
             f.write('\n')
             f.write('[User Interface Settings]\n')
             f.write('BRIEF=Juniper | Functional programming for Arduino\n')
-            f.write('ICON=Juniper.ico\n')
+            f.write('ICON=' + os.path.join(os.getcwd(), 'Juniper.ico') + '\n')
             f.write('WELCOME MESSAGE=Drag a .jun file into the window to begin\n')
             f.write('\n')
             f.write('[Programming Language Settings]\n')
