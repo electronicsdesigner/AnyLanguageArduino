@@ -1,4 +1,4 @@
-#Juniper Compiler
+# Juniper Compiler
 Juniper programming language cross-compiler for windows.
 
 Juniper is a functional reactive programming language being
