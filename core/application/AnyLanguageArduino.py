@@ -115,8 +115,8 @@ class AnyLanguageArduino(wx.Frame):
         vbox = wx.BoxSizer(wx.VERTICAL)
         vbox.Add(self.FileNameTextBox, flag=wx.TOP | wx.EXPAND)
         nb.AddPage(self.CodeTab, "Code")
-        nb.AddPage(self.ConsoleTab, "Console")
         nb.AddPage(self.ScriptTab, "Script")
+        nb.AddPage(self.ConsoleTab, "Console")
         vbox.Add(nb, proportion=1, flag=wx.EXPAND)
         statusBar = wx.Panel(self)
         statusBox = wx.BoxSizer(wx.HORIZONTAL)
@@ -148,7 +148,7 @@ class AnyLanguageArduino(wx.Frame):
             self.SetTitle(self.config['BRIEF'])
         else:
             self.SetTitle('Any Language Arduino')
-        if self.config['ICON']:
+        if self.config['ICON'] and os.path.exists(self.config['ICON']):
             self.SetIcon(wx.Icon(self.config['ICON']))
 
     def __upload__(self):
